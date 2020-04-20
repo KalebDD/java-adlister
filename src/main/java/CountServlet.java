@@ -21,9 +21,9 @@ public class CountServlet extends HttpServlet {
 
         if (reset != null) {
             counter = 0;
-            out.println("<h1>Counter reset. Total number of hits: " + counter);
+            out.println("<h1>Counter reset. Total number of hits: " + counter + "</h1>");
         } else {
-            out.println("<h1>Total number of hits: " + counter);
+            out.println("<h1>Total number of hits: " + counter + "</h1>");
         }
 
     }
