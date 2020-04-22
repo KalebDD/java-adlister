@@ -1,8 +1,13 @@
-public class Ad {
+import java.io.Serializable;
+
+public class Ad implements Serializable {
     private long id;
     private long userId;
     private String title;
     private String description;
+
+    // Always include empty constructor in your bean
+    public Ad() {}
 
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
