@@ -11,8 +11,12 @@
 <html>
 <head>
     <title>Login</title>
+    <%@include file="partials/head-css.jsp" %>
 </head>
 <body>
+
+    <%@include file="partials/navbar.jsp" %>
+
     <form name="login" method="POST">
         <label for="username">Username</label>
         <input type="text" id="username" name="username">
@@ -29,5 +33,7 @@
             </c:redirect>
         </c:when>
     </c:choose>
+
+    <%@include file="partials/body-js.jsp" %>
 </body>
 </html>
