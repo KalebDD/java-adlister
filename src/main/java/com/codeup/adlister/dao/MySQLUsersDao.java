@@ -2,13 +2,12 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.User;
 import controllers.Config;
-
 import java.sql.*;
 
 
 public class MySQLUsersDao implements Users {
 
-    private Connection connection = null;
+    private Connection connection;
 
     public MySQLUsersDao(Config config) {
         try {
@@ -31,7 +30,11 @@ public class MySQLUsersDao implements Users {
             stmt.setString(1, username);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                User result = new User(rs.getLong("id"), rs.getString("username"), rs.getString("email"), rs.getString("password"));
+                User result = new User
+                        (rs.getLong("id"),
+                        rs.getString("username"),
+                        rs.getString("email"),
+                        rs.getString("password"));
                 return result;
             } else {
                 return null;
