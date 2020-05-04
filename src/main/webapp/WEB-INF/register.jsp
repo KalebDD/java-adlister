@@ -16,6 +16,10 @@
             <input id="new-username" name="new-username" class="form-control" type="text">
         </div>
         <div class="form-group">
+            <label for="new-email">Add Email</label>
+            <input id="new-email" name="new-email" class="form-control" type="email">
+        </div>
+        <div class="form-group">
             <label for="new-password">Create Password</label>
             <input id="new-password" name="new-password" class="form-control" type="password">
         </div>
